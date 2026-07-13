@@ -1,3 +1,1 @@
-Netlify 배포용입니다. 폴더 또는 ZIP 전체를 Deploys에 업로드하세요.
-단일 HTML 안에 계산 엔진과 화면 기능이 포함되어 있습니다.
-버전: FREE v4.6 easy-read benchmark / 2026-07-13
+Netlify Deploys 화면에 이 ZIP을 업로드하세요. index.html 단일 앱이며 별도 JS는 필요하지 않습니다.
