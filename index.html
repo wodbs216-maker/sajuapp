@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>사주노트 | 나를 읽는 사주·궁합</title>
-<meta name="description" content="생년월일과 출생시간으로 나의 핵심 성향, 원국, 오행, 귀인, 대운·세운과 2인 궁합을 한눈에 살펴보세요.">
+<title>사주노트 | 나를 이해하는 가장 쉬운 사주</title>
+<meta name="description" content="원국·오행·귀인·대운·세운·궁합까지, 나를 이해하는 가장 쉬운 사주">
 <meta name="theme-color" content="#F7F3ED">
-<link rel="canonical" href="https://jaayunss.netlify.app/">
+<link rel="canonical" href="https://sajuapp-181.pages.dev/">
 <link rel="icon" type="image/png" href="/saju-icon.png">
 <link rel="apple-touch-icon" href="/saju-icon.png">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="사주노트">
-<meta property="og:title" content="사주노트 | 나를 읽는 사주·궁합">
-<meta property="og:description" content="나의 핵심 성향부터 원국·오행·귀인·대운과 두 사람의 심층 궁합까지 무료로 확인하세요.">
-<meta property="og:url" content="https://jaayunss.netlify.app/">
-<meta property="og:image" content="https://jaayunss.netlify.app/saju-share-cover.png">
+<meta property="og:title" content="사주노트 | 나를 이해하는 가장 쉬운 사주">
+<meta property="og:description" content="원국·오행·귀인·대운·세운·궁합까지, 나를 이해하는 가장 쉬운 사주">
+<meta property="og:url" content="https://sajuapp-181.pages.dev/">
+<meta property="og:image" content="https://sajuapp-181.pages.dev/saju-share-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="사주노트 공유 이미지">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="사주노트 | 나를 읽는 사주·궁합">
-<meta name="twitter:description" content="원국·오행·귀인·대운·세운과 2인 궁합을 한눈에 확인하세요.">
-<meta name="twitter:image" content="https://jaayunss.netlify.app/saju-share-cover.png">
+<meta name="twitter:title" content="사주노트 | 나를 이해하는 가장 쉬운 사주">
+<meta name="twitter:description" content="원국·오행·귀인·대운·세운·궁합까지, 나를 이해하는 가장 쉬운 사주">
+<meta name="twitter:image" content="https://sajuapp-181.pages.dev/saju-share-cover.png">
 <!-- Engine: v4.5 logic audit / Public UI: v4.6 easy-read benchmark / Update: 2026-07-13 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap');
@@ -306,6 +306,41 @@ footer{border-color:var(--line)!important}
   h1{font-size:25px!important}.card{padding:16px!important}.character-question{font-size:16px!important}.character-answer{font-size:14px!important}
 }
 @media(prefers-color-scheme:dark){html,body{background:var(--bg)!important;color:var(--ink)!important}}
+
+/* v6.2 compatibility contrast fix: dark, readable report inside the light app shell */
+.compat-report{--compat-card:#20262d;--compat-panel:#171c22;--compat-line:#46505a;--compat-text:#f4f6f8;--compat-sub:#d9dfe5;--compat-muted:#c1c9d1;--compat-gold:#f0cf72;color:var(--compat-text)}
+.compat-report header{background:linear-gradient(145deg,#171b20,#252c34)!important;border-color:#6f6038!important;box-shadow:0 12px 28px rgba(22,25,29,.18)!important}
+.compat-report header h1,.compat-report header .sub{color:var(--compat-text)!important}
+.compat-report .update-badge{background:#332d1f!important;border-color:#8c7842!important;color:#f5d77f!important}
+.compat-report .card{background:linear-gradient(145deg,#252c34,#20262d)!important;border-color:var(--compat-line)!important;box-shadow:0 10px 24px rgba(22,25,29,.16)!important}
+.compat-report .compat-hero{background:linear-gradient(135deg,#29291f,#25252d 48%,#202b34)!important;border-color:#8e7840!important;box-shadow:0 10px 24px rgba(22,25,29,.14)}
+.compat-report .body{color:var(--compat-text)!important}
+.compat-report .body.sm,.compat-report .dim,.compat-report .faint,.compat-report .note,.compat-report .aside,.compat-report .compat-chart-caption,.compat-report .visual-key span{color:var(--compat-sub)!important}
+.compat-report .eyebrow{color:var(--compat-gold)!important;font-weight:700}
+.compat-report .cardtitle,.compat-report .cream,.compat-report .compat-bigscore,.compat-report .compat-metric-top,.compat-report .compat-year-title,.compat-report .compat-element-name{color:var(--compat-text)!important}
+.compat-report .compat-type,.compat-report .compat-num,.compat-report .compat-archetype,.compat-report .compat-person-name,.compat-report .compat-year-score,.compat-report .speech-person{color:var(--compat-gold)!important}
+.compat-report .compat-nav a{background:#20262d;border-color:#515c67;color:#edf1f4}
+.compat-report .compat-metric,.compat-report .compat-person,.compat-report .compat-action,.compat-report .compat-highlight>div,.compat-report .compat-chart,.compat-report .compat-flow-wrap,.compat-report .compat-timeline-chart{background:var(--compat-panel)!important;border-color:var(--compat-line)!important}
+.compat-report .subcard,.compat-report .scene-card,.compat-report .speech-bubble{background:#171c22!important;border-color:var(--compat-line)!important}
+.compat-report .scene-q{background:linear-gradient(90deg,#372d34,#282735)!important;color:#f7f3f6!important}
+.compat-report .speech-bubble{color:var(--compat-text)!important}
+.compat-report .speech-bubble:after{border-color:#171c22 transparent transparent!important}
+.compat-report .compat-action li,.compat-report .compat-script,.compat-report .compat-fun-tip{color:#e8edf1!important}
+.compat-report .compat-script{background:#1b2a36!important;border-color:#45647b!important}
+.compat-report .compat-fun-tip{background:#302b1d!important;border-left-color:var(--compat-gold)!important}
+.compat-report .compat-element-legend span{color:#e0e5ea!important}
+.compat-report .keyline{background:#352f20!important;border-left-color:var(--compat-gold)!important;color:#fff4d0!important}
+.compat-report .notice{background:#1c302d!important;border-color:#496e66!important;color:#dcebe7!important}
+.compat-report .notice strong{color:#f3faf8!important}
+.compat-report .gauge{background:#11161b!important}
+.compat-report .btn-ghost{background:#20262d!important;border-color:#66717b!important;color:#f5f7f9!important}
+.compat-report footer{border-color:#4b545d!important}
+@media(max-width:520px){.compat-report .body{font-size:14.5px}.compat-report .body.sm{font-size:13.5px}.compat-report .dim,.compat-report .note{font-size:12px}.compat-report .compat-element-name{font-size:11.5px}}
+@media print{
+  .compat-report{color:#111!important}
+  .compat-report header,.compat-report .card,.compat-report .compat-hero,.compat-report .compat-metric,.compat-report .compat-person,.compat-report .compat-action,.compat-report .compat-highlight>div,.compat-report .subcard,.compat-report .scene-card,.compat-report .speech-bubble{background:#fff!important;color:#111!important;border-color:#aaa!important;box-shadow:none!important}
+  .compat-report .body,.compat-report .body.sm,.compat-report .dim,.compat-report .faint,.compat-report .note,.compat-report .aside,.compat-report .eyebrow,.compat-report .cardtitle,.compat-report .cream,.compat-report .compat-element-name,.compat-report .compat-element-legend span{color:#222!important}
+}
 
 </style>
 </head>
@@ -1515,7 +1550,7 @@ function renderCompat() {
   const noteBlock=arr=>arr.map(n=>`<div class="subcard"><div class="cardtitle" style="font-size:13px;color:${n.c}">${n.t}${ptsBadge(n)}</div><div class="body sm">${n.d}</div></div>`).join("");
   const metricGrid=c.metrics.map(m=>`<div class="compat-metric"><div class="compat-metric-top"><span>${m.label}</span><span class="compat-num">${m.score}</span></div><div class="compat-bar"><span style="width:${m.score}%"></span></div><div class="dim">${m.desc}</div></div>`).join("");
   const childCard=c.child?`<div class="card compat-anchor" id="compat-child"><div class="eyebrow">자녀·가족계획 흐름 · 전통 상징 참고</div><div class="body sm">이 영역은 임신 가능성을 계산하지 않습니다. 전통 명리의 자녀 상징이 원국과 세운에 어떻게 드러나는지만 설명합니다.</div><div class="compat-duo"><div class="compat-person"><div class="compat-person-name">${esc(c.child.wifeName)}님 · ${c.child.wifeInfo.primary} ${E_KR[c.child.wifeInfo.element]}(${c.child.wifeInfo.element})</div><div class="body sm">${c.child.wifeInfo.note} 원국 표시 ${c.child.wifeInfo.count}개 · 가중 오행 ${c.child.wifeInfo.percent}%.</div></div><div class="compat-person"><div class="compat-person-name">${esc(c.child.husbandName)}님 · ${c.child.husbandInfo.primary} ${E_KR[c.child.husbandInfo.element]}(${c.child.husbandInfo.element})</div><div class="body sm">${c.child.husbandInfo.note} 원국 표시 ${c.child.husbandInfo.count}개 · 가중 오행 ${c.child.husbandInfo.percent}%.</div></div></div><div class="notice"><strong>오행 연결 확인</strong> 자녀 상징을 단순히 “목이 부족하다”처럼 판단하지 않습니다. 각 사람의 일간에 따라 식상·관성의 오행이 달라집니다. 특히 금 일간의 식상은 수(水)입니다.</div>${!c.child.hourKnown?`<div class="notice"><strong>신뢰도 제한</strong> 두 사람 중 한 명이라도 출생시간이 없어 전통적으로 자녀궁으로 보는 시주를 확인하지 못했습니다. 아래 연도는 낮은 신뢰도의 참고 흐름입니다.</div>`:""}${c.child.windows.length?c.child.windows.map(w=>`<div class="subcard"><div class="cardtitle" style="font-size:13px;color:${w.both?"#E5C465":"#7DB889"}">${w.year}년${w.both?" · 두 사람의 1차 참고축이 함께 활성화":w.wGood?` · ${c.child.wifeName}님 식상 흐름`:` · ${c.child.husbandName}님 관성 흐름`}</div><div class="dim">가족계획을 논의하거나 돌봄·창작·책임 이슈에 관심이 커질 수 있는 상징적 시기입니다. 출산 사건을 예측하는 뜻은 아닙니다.</div></div>`).join(""):`<div class="subcard"><div class="body sm">향후 6년에는 이 계산 방식의 1차 참고축이 동시에 두드러지는 해가 없습니다. 자녀 인연이나 임신 가능성이 없다는 뜻이 아닙니다.</div></div>`}<div class="note">임신·난임·피임·출산 시기 판단에는 사용할 수 없으며 의료진의 안내와 실제 가족계획을 우선하세요.</div></div>`:"";
-  return `<header><div class="overline">四柱深層 · COMPATIBILITY</div><h1>${esc(A.name)} ✕ ${esc(B.name)}</h1><div class="sub">${A.p.dayStem}${A.p.dayBranch} 일주 · ${B.p.dayStem}${B.p.dayBranch} 일주</div><div class="update-badge">업데이트 2026.07.14</div></header>
+  return `<div class="compat-report"><header><div class="overline">四柱深層 · COMPATIBILITY</div><h1>${esc(A.name)} ✕ ${esc(B.name)}</h1><div class="sub">${A.p.dayStem}${A.p.dayBranch} 일주 · ${B.p.dayStem}${B.p.dayBranch} 일주</div><div class="update-badge">업데이트 2026.07.14</div></header>
   <div class="toolbar"><button type="button" class="btn btn-ghost" id="compat-copy" onclick="copyCompatSummary()">궁합 요약 복사</button><button type="button" class="btn btn-ghost" onclick="window.print()">궁합 전체 인쇄 · PDF</button></div>
   <div class="compat-hero"><span class="compat-type">${meta.badge} · ${esc(c.type)}</span><div class="compat-scoreline"><div><div class="eyebrow" style="margin-top:12px">${meta.scoreTitle}</div><div class="compat-bigscore">${c.score}<span style="font-size:16px;color:#C3CBD3"> / 100</span></div></div><div><div class="eyebrow">관계 캐릭터</div><div class="compat-archetype">${c.archetype.name}</div></div></div><div class="body" style="margin-top:12px">${c.archetype.desc}</div><div class="compat-highlight"><div><div class="dim">가장 잘 맞는 영역</div><div class="cardtitle" style="margin-top:4px">${c.top[0].label} ${c.top[0].score}점</div></div><div><div class="dim">의식적으로 맞출 영역</div><div class="cardtitle" style="margin-top:4px">${c.low[0].label} ${c.low[0].score}점</div></div></div><div class="note">점수는 관계의 성공 확률이 아니라 앱 내부의 전통 명리 비교 지표입니다.</div></div>
   <div class="compat-nav screen-only"><a href="#compat-summary">총평</a><a href="#compat-metrics">8대 지수</a><a href="#compat-role">서로의 역할</a><a href="#compat-talk">대화·갈등</a><a href="#compat-money">돈·생활</a><a href="#compat-support">귀인</a><a href="#compat-fun">상황극</a><a href="#compat-traditional">전통 근거</a></div>
@@ -1535,7 +1570,7 @@ function renderCompat() {
   ${childCard}
   <div class="card"><div class="eyebrow">두 사람의 기본 기질</div><div class="body sm"><span class="cream">${esc(A.name)}</span> — ${DM_DESC[A.p.dayStem]}</div><div class="divider"></div><div class="body sm"><span class="cream">${esc(B.name)}</span> — ${DM_DESC[B.p.dayStem]}</div></div>
   <div class="card"><div class="eyebrow">궁합은 이렇게 계산했어요</div><div class="body sm">기본 전통 점수는 일간·일지·띠·오행 보완을 중심으로 계산합니다. 별도의 8대 관계 지수는 같은 계산값을 대화·생활·갈등·돈·성장·귀인·추진력 관점으로 재편집한 앱 내부 상대 지표입니다.</div><div class="subcard"><div class="body sm"><span class="cream">일간</span> — 간합·상생·비화·상극을 통해 기본 성정의 만남을 봅니다.</div></div><div class="subcard"><div class="body sm"><span class="cream">일지</span> — 육합·삼합·충·원진·귀문·형으로 가까운 관계의 생활 결을 봅니다.</div></div><div class="subcard"><div class="body sm"><span class="cream">띠·오행·신강약</span> — 바깥 어울림, 부족한 기운의 보완, 추진력 차이를 함께 봅니다.</div></div><div class="note">궁합은 관계의 성공·결혼·이별을 예측하지 않습니다. 실제 관계의 질은 대화, 안전, 존중, 생활 조건에 의해 달라집니다.</div></div>
-  <button class="btn btn-ghost" onclick="backToInput()">처음으로 돌아가기</button><footer><div class="dim">사주노트 · 업데이트 2026.07.14 · 전통 명리 기반 참고 콘텐츠 · 중요한 결정은 실제 관계와 전문가 판단을 우선하세요</div></footer>`;
+  <button class="btn btn-ghost" onclick="backToInput()">처음으로 돌아가기</button><footer><div class="dim">사주노트 · 업데이트 2026.07.14 · 전통 명리 기반 참고 콘텐츠 · 중요한 결정은 실제 관계와 전문가 판단을 우선하세요</div></footer></div>`;
 }
 
 /* ═══════════ 상태 & 유틸 ═══════════ */
