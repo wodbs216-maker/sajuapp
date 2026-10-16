@@ -1,3 +1,4 @@
+
 /* Browser-only recent people storage */
 /* ═══════════ 프로필 저장(window.storage) ═══════════ */
 /* ═══════════ 저장 어댑터 (클로드 내부/일반 브라우저 모두 지원) ═══════════ */
@@ -29,7 +30,7 @@ async function loadProfiles() {
       if (L.view === "report" && L.a) {
         state.person = buildPerson(L.a.name, L.a.y, L.a.m, L.a.d, L.a.hourBranch, L.a.gender);
         state.selDaeun = state.person.curDaeun ? state.person.curDaeun.age : state.person.p.daeun[0].age;
-        state.view = "report"; state.tab = L.tab || "wonguk";
+        state.view = "report"; state.tab = L.tab || "character";
       } else if (L.view === "compat" && L.a && L.b) {
         state.person = buildPerson(L.a.name, L.a.y, L.a.m, L.a.d, L.a.hourBranch, L.a.gender);
         state.person2 = buildPerson(L.b.name, L.b.y, L.b.m, L.b.d, L.b.hourBranch, L.b.gender);
@@ -79,8 +80,9 @@ function loadProfileToForm(id, sfx) {
 }
 
 async function clearAllSavedData() {
-  if (!confirm("이 기기에 저장된 사주 프로필과 마지막 화면을 모두 삭제할까요?")) return;
+  if (!confirm("이 기기에 저장된 사주 프로필, 마지막 화면, 내 노트를 모두 삭제할까요?")) return;
   state.profiles = [];
+  try { localStorage.removeItem("saju-notes-v7"); } catch (e) {}
   await store.del("saju-profiles");
   await store.del("saju-last");
   state.view = "input"; state.person = null; state.person2 = null; state.compat = null;
@@ -93,4 +95,5 @@ async function rememberProfile(P) {
   state.profiles = [snap, ...state.profiles.filter(x => key(x)!==key(snap))].slice(0,8);
   await saveProfileList();
 }
+
 
